@@ -12,8 +12,57 @@ def input_size():
     return rows, cols
 
 
+def create_manual(rows, cols, array):
+    """
+    Функция, которая создает массив
+    с ручным вводом элементов.
+    """
+    array = []
+    for i in range(rows):
+        row = []
+        for j in range(cols):
+            row.append(int(input(f'Элемент [{i}][{j}]: ')))
+        array.append(row)
+
+    return array
+
+
+def create_auto(rows, cols):
+    """
+    Функция, создающая массив
+    из случайных чисел от 0 до 100
+    """
+    array = []
+    for i in range(rows):
+        row = []
+        for j in range(cols):
+            row.append(random.randint(0,100))
+        array.append(row)
+
+    return array
+
+
 def create_array(rows, cols, array):
-    print("Тут будет функция")
+    """
+    Функция которая предлагает
+    выбрать способ создания массива.
+    """
+    if rows == 0:
+        print("Сначала введите размер массива")
+        return array
+
+    print('1) Вручную')
+    print('2) Автоматически')
+    print('3) Назад')
+
+    choice = input('Выберите способ: ').strip()
+
+    if choice == '1':
+        array = create_manual(rows, cols)
+
+    elif choice == '2':
+        array = create_auto(rows, cols)
+
     return array
 
 
