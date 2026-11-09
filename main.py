@@ -109,7 +109,21 @@ def sum_above_diagonal(array):
 
 
 def min_of_row_maxes(array):
-    print("В разработке")
+    """
+    Функция №26. Находит минимальный элемент
+    среди максимальных элементов строк.
+    """
+    maxes = []
+    for row in array:
+        maxes.append(max(row))
+
+    min_value = min(maxes)
+    row_index = maxes.index(min_value)
+    col_index = array[row_index].index(min_value)
+
+    print("Максимумы строк:", *maxes)
+    print("Минимальный из них:", min_value)
+    print("Строка:", row_index + 1, "Столбец:", col_index + 1)
 
 
 def replace_by_first_row_sum(array):
