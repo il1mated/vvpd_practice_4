@@ -12,7 +12,7 @@ def input_size():
     return rows, cols
 
 
-def create_manual(rows, cols, array):
+def create_manual(rows, cols):
     """
     Функция, которая создает массив
     с ручным вводом элементов.
