@@ -93,8 +93,19 @@ def print_diagonals(array):
     print("Главная диагональ:", *main_diag)
     print("Побочная диагональ:", *side_diag)
 
+
 def sum_above_diagonal(array):
-    print("В разработке")
+    """
+    Функция №9. Считает сумму элементов,
+    расположенных выше главной диагонали.
+    """
+    total = 0
+    for i in range(len(array)):
+        for j in range(len(array[0])):
+            if j > i:
+                total += array[i][j]
+
+    print("Сумма элементов выше главной диагонали:", total)
 
 
 def min_of_row_maxes(array):
