@@ -67,8 +67,16 @@ def create_array(rows, cols, array):
 
 
 def print_array(array):
-    print("Тут будет функция")
-
+    """
+    Функция которая
+    выводит массив
+    на экран
+    """
+    if array == []:
+        print('Массив еще не был создан')
+    else:
+        for row in array:
+            print(*row, sep='\t')
 
 def functions_menu(array):
     print("Тут будет функция")
