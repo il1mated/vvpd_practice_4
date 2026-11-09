@@ -2,8 +2,14 @@ import random
 
 
 def input_size():
-    print("Тут будет функция")
-    return 0, 0
+    """
+    Функция, запрашивающая
+    размер двумерного массива.
+    """
+    rows = int(input("Введите количество строк: "))
+    cols = int(input("Введите количество столбцов: "))
+
+    return rows, cols
 
 
 def create_array(rows, cols, array):
