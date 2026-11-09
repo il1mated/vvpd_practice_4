@@ -144,8 +144,20 @@ def replace_by_first_row_sum(array):
 
 
 def sum_positive_without_zeros(array):
-    print("В разработке")
+    """
+    Функция №31. Считает в строках
+    сумму положительных элементов
+    без нулей 
+    """
+    total = 0
 
+    for row in array:
+        if 0 not in row:
+            for x in row:
+                if x > 0:
+                    total += x
+
+    print("Сумма положительных элементов в строках:", total)
 
 def functions_menu(array):
     """
