@@ -127,7 +127,20 @@ def min_of_row_maxes(array):
 
 
 def replace_by_first_row_sum(array):
-    print("В разработке")
+    """
+    Функция №29. Заменяет элементы, меньшие
+    суммы первой строки, на эту сумму.
+    """
+    first_sum = sum(array[0])
+    print("Сумма первой строки:", first_sum)
+
+    for row in array:
+        for x in row:
+            if x < first_sum:
+                print(first_sum, end="\t")
+            else:
+                print(x, end="\t")
+        print()
 
 
 def sum_positive_without_zeros(array):
