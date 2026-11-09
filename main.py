@@ -79,8 +79,19 @@ def print_array(array):
             print(*row, sep='\t')
 
 def print_diagonals(array):
-    print("В разработке")
+    """
+    Функция №7. Выводит главную
+    и побочную диагонали массива.
+    """
+    size = min(len(array), len(array[0]))
+    main_diag = []
+    side_diag = []
+    for i in range(size):
+        main_diag.append(array[i][i])
+        side_diag.append(array[i][len(array[0]) - 1 - i])
 
+    print("Главная диагональ:", *main_diag)
+    print("Побочная диагональ:", *side_diag)
 
 def sum_above_diagonal(array):
     print("В разработке")
