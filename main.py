@@ -78,8 +78,59 @@ def print_array(array):
         for row in array:
             print(*row, sep='\t')
 
+def print_diagonals(array):
+    print("В разработке")
+
+
+def sum_above_diagonal(array):
+    print("В разработке")
+
+
+def min_of_row_maxes(array):
+    print("В разработке")
+
+
+def replace_by_first_row_sum(array):
+    print("В разработке")
+
+
+def sum_positive_without_zeros(array):
+    print("В разработке")
+
+
 def functions_menu(array):
-    print("Тут будет функция")
+    """
+    Функция, которая выводит меню
+    функций работы с массивом.
+    """
+    flag = True
+    if array == []:
+        print("Сначала создайте массив")
+        return
+
+    while flag:
+        print("\nа. Напечатать главную и побочную диагонали")
+        print("б. Сумма элементов выше главной диагонали")
+        print("в. Минимальный из максимумов строк и его индексы")
+        print("г. Заменить элементы меньше суммы первой строки на эту сумму")
+        print("д. Сумма положительных элементов в строках без нулей")
+        print("е. Назад")
+        choice = input("Выберите функцию: ")
+
+        if choice == "а":
+            print_diagonals(array)
+        elif choice == "б":
+            sum_above_diagonal(array)
+        elif choice == "в":
+            min_of_row_maxes(array)
+        elif choice == "г":
+            replace_by_first_row_sum(array)
+        elif choice == "д":
+            sum_positive_without_zeros(array)
+        elif choice == "е":
+            flag = False
+
+        input("Нажмите Enter, чтобы вернуться назад")
 
 
 def main():
